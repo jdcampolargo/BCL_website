@@ -1,9 +1,3 @@
-# BCL WEBSITE
-There used to be a website about the wonderful BCL before: https://web.archive.org/web/20190316170955/http://bcl.ece.illinois.edu/ now Here: https://bclillinois.vercel.app/ created and maintined by Jamie Hutchinson 
-
-
-it was very nice but then it was gone, jamie was kind enough to send me all the files and i couldnt help but by making this website live again, anywahs i hope you enjoy!!!
-
 
 # BCL Website
 
