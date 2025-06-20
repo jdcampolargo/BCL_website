@@ -568,6 +568,22 @@ content="biological computers, biological computer laboratory, cybernetics, hist
  </o:shapelayout></xml><![endif]-->
 </head>
 
+<!-- This script is used to redirect all links to the Internet Archive Wayback Machine since most of them are dead anyways -->
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    const links = document.querySelectorAll('a[href^="http"]');
+    links.forEach(link => {
+      const url = link.getAttribute('href');
+      // Skip if it's already an archive link
+      if (!url.includes("web.archive.org")) {
+        link.setAttribute('href', `https://web.archive.org/web/*/${url}`);
+        link.setAttribute('target', '_blank');
+        link.setAttribute('rel', 'noreferrer noopener');
+      }
+    });
+  });
+  </script>
+
 <body bgcolor=white background=BCLlogo.gif lang=EN-US link=blue vlink=purple
 style='tab-interval:.5in'>
 
@@ -627,13 +643,17 @@ mso-fareast-font-family:"Times New Roman"'>
 
 </div>
 
+
 </div>
 
 <p class=style2 align=center style='text-align:center'>A web site bringing
 together resources related to the University of Illinois<br>
-Biological Computer Laboratory, 1958�1976</p>
+Biological Computer Laboratory, 1958-1976</p>
 
 <div>
+  <div style="background-color:#f8e5b7; border:1px solid #e0c080; padding:10px 16px; text-align:center; font-family:Verdana, sans-serif; font-size:10pt; margin-bottom:14px;">
+    <strong>Note:</strong> Many of the original links from this site point to resources that no longer exist on the live web. To preserve the experience, all external links now automatically redirect through the Internet Archive's <a href="https://archive.org/web/" target="_blank" rel="noreferrer noopener">Wayback Machine</a>. If a page appears missing, try refreshing or visiting it directly via the Archive.
+  </div>
 
 <div>
 
@@ -970,7 +990,7 @@ mso-fareast-font-family:"Times New Roman"'>
 comments and suggestions for further content and links. </p> -->
 
 <p class="style4">
-  Built, maintained, and updated for many years by <strong>Jamie Hutchinson</strong>, whose dedication helped preserve the spirit and memory of BCL and Heinz von Foerster online. If you'd like to reach out to him, you can <a href="mailto:jhutchin@illinois.edu">email him here</a>.<br><br>
+  Built, maintained, and updated for many years by <strong>Jamie Hutchinson</strong>, whose dedication helped preserve the spirit and memory of BCL and Heinz von Foerster. If you'd like to reach out to him, you can <a href="mailto:jhutchin@illinois.edu">email him here</a>.<br><br>
   This site is now maintained by Juan David Campolargo. If you have comments or suggestions for additional content or links, please <a href="https://www.juandavidcampolargo.com/contact" target="_blank" rel="noreferrer noopener">contact me here</a>.
 </p>
 
